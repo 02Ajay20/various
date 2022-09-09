@@ -61,7 +61,7 @@ def problemD():
 
 def problemE():
   try:
-    print('''escribe un numero para siguiente ecuacion:
+    print('''escribe los numeros para siguiente ecuacion:
 
     √a + √b^2''')
     a = float(input("escribe un numero a: "))
