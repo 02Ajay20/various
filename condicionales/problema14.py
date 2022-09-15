@@ -11,11 +11,9 @@ elif len(numero_texto) > 4:
 elif len(numero_texto) < 4:
   print("escribe un numero de 4 cifras por favor")
 
-elif numero % 6 == 0 and numero % 3 == 0:
-  print(f"{numero} es multiplo de 3 y de 6")
-elif numero % 3 == 0:
+if numero % 3 == 0:
   print(f"{numero} es multiplo de 3")
-elif numero % 6 == 0:
+if numero % 6 == 0:
   print(f"{numero} es multiplo de 6")
 else:
   print(f"{numero} no es multiplo ni de 3 ni de 6")
