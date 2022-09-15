@@ -13,7 +13,9 @@ elif len(numero_texto) < 4:
 
 if numero % 3 == 0:
   print(f"{numero} es multiplo de 3")
+else:
+  print(f"{numero} no es multiplo de 3")
 if numero % 6 == 0:
   print(f"{numero} es multiplo de 6")
 else:
-  print(f"{numero} no es multiplo ni de 3 ni de 6")
+  print(f"{numero} no es multiplo de 6")
