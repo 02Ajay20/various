@@ -1,0 +1,14 @@
+Se cuenta con los votos obtenidos por juan, Pedro y Maria en una eleccion democratica a la precidencia del club. 
+
+Para ganar la eleccion se debe de oftener como minimo el 50% total de les votos mas 1, en caso de que no haya un ganador se repite la elecion en la segunda vuelta. 
+llendo a esta los 2 candidatos que obtengan la mas alta votacion. 
+
+se anula la eleccion en caso de producirse un empate doble por el segundo lugar o un empate triple 
+
+diseñe un algoritmo que determine el resultado de la elecion
+
+
+juan == a
+pedro == b
+maria == c
+
