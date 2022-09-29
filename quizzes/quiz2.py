@@ -65,7 +65,7 @@ else:
                 else:
                   ganador = 3
             else:
-              print("Eleccion anulada por empate en la sugunda posicion")
+              empate = 2
           else:
             #segunda parte: si todos los resultados de votos son distinto
             if pedro < juan:
