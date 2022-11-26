@@ -26,39 +26,42 @@ def showttt(a,b):
 def conditions(simbol):
   enter = True
   while enter != False:
-    print("Select column and row, letters columns - numbers rows")
-    column = input("Select column: ").lower()
-    row = int(input("Select row: "))
-
-    if row < 4:
-      if row > 0:
-        if column == "a":
-          if ttt[row-1][0] != "■":
-            print("This cell has already been selected")
+    try:
+      print("Select column and row, letters columns - numbers rows")
+      column = input("Select column: ").lower()
+      row = int(input("Select row: "))
+      
+      if row < 4:
+        if row > 0:
+          if column == "a":
+            if ttt[row-1][0] != "■":
+              print("This cell has already been selected")
+            else:
+              ttt[row-1].pop(0)
+              ttt[row-1].insert(0, simbol)
+              enter = False
+          elif column == "b":
+            if ttt[row-1][1] != "■":
+              print("This cell has already been selected")
+            else:
+              ttt[row-1].pop(1)
+              ttt[row-1].insert(1, simbol)
+              enter = False
+          elif column == "c":
+            if ttt[row-1][2] != "■":
+              print("This cell has already been selected") 
+            else:
+              ttt[row-1].pop(2)
+              ttt[row-1].insert(2, simbol)
+              enter = False
           else:
-            ttt[row-1].pop(0)
-            ttt[row-1].insert(0, simbol)
-            enter = False
-        elif column == "b":
-          if ttt[row-1][1] != "■":
-            print("This cell has already been selected")
-          else:
-            ttt[row-1].pop(1)
-            ttt[row-1].insert(1, simbol)
-            enter = False
-        elif column == "c":
-          if ttt[row-1][2] != "■":
-            print("This cell has already been selected") 
-          else:
-            ttt[row-1].pop(2)
-            ttt[row-1].insert(2, simbol)
-            enter = False
+            print("this column dont exist, write a b or c")
         else:
-          print("this column dont exist, write a b or c")
+          print("this row dont exist, write row 1 2 or 3")
       else:
         print("this row dont exist, write row 1 2 or 3")
-    else:
-      print("this row dont exist, write row 1 2 or 3")
+    except ValueError:
+      print("In row only write numbers, no letters")
 
 def win():
   #Diagonals
