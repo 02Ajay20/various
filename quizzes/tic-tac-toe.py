@@ -1,4 +1,4 @@
-#Tic-Tac-Toe Game
+#Tic-Tac-Toe Game - Created by 02Ajay20
 ttt = [["■","■","■"],["■","■","■"],["■","■","■"]]
 simbols = []
 def players():
@@ -6,7 +6,9 @@ def players():
   while enter != False:
     player1 = input("Select a letter player 1: ").upper()
     player2 = input("Select a letter player 2: ").upper()
-    if player1 == player2:
+    if player1 == "■" or player2 == "■":
+      print("You can't choose the cell symbol")
+    elif player1 == player2:
       print("Select diferent simbols")
     else:
       simbols.append(player1)
