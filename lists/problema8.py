@@ -1,5 +1,6 @@
 numeros = []
 ordenados = []
+
 n = int(input("cuantos numeros quiere ingresar: "))
 
 for i in range(1,n+1):
@@ -15,6 +16,9 @@ for i in range(0, n):
       ordenados.append(numeros[i])
     if numeros[i] > ordenados[0]:
       ordenados.insert(0, numeros[i])
+  if i == n-1:
+    if numeros[i] == ordenados[i-1]:
+      ordenados.append(numeros[i])
       
   if i > 1:
     if numeros[i] < ordenados[i-1]:
@@ -24,14 +28,15 @@ for i in range(0, n):
     else:
       cont = 0
       for j in range(0,i-1):
+        if cont == 1:
+          break
         if cont == 0:
           if numeros[i] == ordenados[j]:
             ordenados.insert(j, numeros[i])
             cont += 1
-        if numeros[i] > ordenados[j+1]:
-          if numeros[i] < ordenados[j]:
-            ordenados.insert(j+1, numeros[i])
-
-
+          if numeros[i] > ordenados[j+1]:
+            if numeros[i] < ordenados[j]:
+              ordenados.insert(j+1, numeros[i])
+              cont += 1
 
 print("numeros",numeros,"\nnumeros ordenados alreves",ordenados)
