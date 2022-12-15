@@ -39,6 +39,7 @@ def identification(vehicle,place):
       return plate
     else:
       if place == "exit":
+        print("Vehicle not found")
         index = "nf"
         return index
 
@@ -439,7 +440,6 @@ def exitVehicles():
             heme = motorbikes[index][2]
             hours(index, "m", heme)
         else:
-          print("Vehicle not found")
           key = False
         enter = False
     else:
